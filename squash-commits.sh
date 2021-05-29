@@ -6,6 +6,7 @@ set -o nounset
 export BASE_BRANCH=$1
 export COMMIT_MESSAGE=$2
 export BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+export TEMP_BRANCH="${BRANCH}_temp"
 
 git checkout "${BASE_BRANCH}"
 git fetch
